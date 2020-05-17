@@ -17,6 +17,6 @@ jobs:
         with:
           step: announce-a-release
         env:
-          ASSET_NAME: ${{ GITHUB_REPOSITORY }}
+          ASSET_NAME: "main-actor-documentation-action"
           RELEASE_TOKEN: ${{ secrets.RELEASE_TOKEN }}
           ZULIP_TOKEN: ${{ secrets.ZULIP_TOKEN }}
