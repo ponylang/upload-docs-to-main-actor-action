@@ -14,10 +14,6 @@
 
 set -o errexit
 
-# Pull in shared configuration specific to this repo
-base=$(dirname "$0")
-source "${base}/config.bash"
-
 # Verify ENV is set up correctly
 # We validate all that need to be set in case, in an absolute emergency,
 # we need to run this by hand. Otherwise the GitHub actions environment should
