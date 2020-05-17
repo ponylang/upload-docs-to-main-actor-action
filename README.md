@@ -22,11 +22,11 @@ jobs:
       - uses: actions/checkout@v1
       - name: Generate documentation and upload
         uses: ponylang/main-actor-documentation-action@master
-          with:
-            library_name: "MYLIBRARY"
-            docs_build_dir: "docs/build-MYLIBRARY"
-            git_user_name: "Ponylang Main Bot"
-            git_user_email: "ponylang.main@gmail.com"
+        with:
+          library_name: "MYLIBRARY"
+          docs_build_dir: "docs/build-MYLIBRARY"
+          git_user_name: "Ponylang Main Bot"
+          git_user_email: "ponylang.main@gmail.com"
         env:
           RELEASE_TOKEN: ${{ secrets.RELEASE_TOKEN }}
 ```
