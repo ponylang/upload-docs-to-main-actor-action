@@ -9,13 +9,8 @@ All notable changes to this project will be documented in this file. This projec
 
 ### Added
 
+- Initial version
 
 ### Changed
 
-
-## [0.0.1] - 2020-05-15
-
-### Added
-
-- First initial working version
 
