@@ -92,11 +92,11 @@ echo -e "\e[34mPreparing to upload generated markdown content from ${GEN_MD}\e[0
 echo -e "\e[34mGit fiddling commences...\e[0m"
 pushd "${GEN_MD}" || exit 1
 echo -e "\e[34mCreating a branch for generated documentation...\e[0m"
-branch_name="${INPUT_INPUT_LIBRARY_NAME}-${VERSION}"
+branch_name="${INPUT_LIBRARY_NAME}-${VERSION}"
 git checkout -b "${branch_name}"
 echo -e "\e[34mAdding content...\e[0m"
 git add .
-git commit -m "Add docs for package: ${INPUT_INPUT_LIBRARY_NAME} version: ${VERSION}"
+git commit -m "Add docs for package: ${INPUT_LIBRARY_NAME} version: ${VERSION}"
 echo -e "\e[34mUploading new generated markdown content...\e[0m"
 git push --set-upstream origin "${branch_name}"
 echo -e "\e[34mGenerated markdown content has been uploaded!\e[0m"
@@ -113,7 +113,7 @@ jsontemplate="
 "
 
 json=$(jq -n \
---arg title "${INPUT_INPUT_LIBRARY_NAME} ${VERSION}" \
+--arg title "${INPUT_LIBRARY_NAME} ${VERSION}" \
 --arg incoming_repo_and_branch "${REPO_OWNER}:${branch_name}" \
 "${jsontemplate}")
 
